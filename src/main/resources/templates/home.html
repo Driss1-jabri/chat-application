@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+</head>
+<body>
+<h2 th:text="'Bienvenu ' + ${user.username}"></h2>
+<span class="msg_time" th:text="${#temporals.format(message.timestamp, 'h:mm a')}+' ' +${#temporals.format(message.timestamp, 'dd/MM/yyyy')}"></span>
+
+</body>
+</html>
